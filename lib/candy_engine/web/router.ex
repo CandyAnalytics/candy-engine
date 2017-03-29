@@ -19,8 +19,9 @@ defmodule CandyEngine.Web.Router do
     get "/", PageController, :index
   end
 
-  # Other scopes may use custom stacks.
-  # scope "/api", CandyEngine.Web do
-  #   pipe_through :api
-  # end
+  scope "/api", CandyEngine.Web do
+    pipe_through :api
+
+
+  end
 end
